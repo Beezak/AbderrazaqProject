@@ -8,10 +8,10 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/Features",
         glue = {"step_definitions"},
-        plugin = {"pretty", "summary", "json:target/cucumber-reports/cucumber-html-reports/report.json"},
-        snippets = CucumberOptions.SnippetType.CAMELCASE,
-        tags = "@international_travel_test"
-        //"me.jvt.cucumber.report.PrettyReports:target/cucumber-reports"
+        plugin = {"pretty", "summary", "json:target/cucumber-reports/cucumber-html-reports/report.json",
+                "me.jvt.cucumber.report.PrettyReports:target/cucumber-reports"},
+        snippets = CucumberOptions.SnippetType.CAMELCASE
+        //tags = "@international_travel_test"
 )
 public class TestRunner {
 }
